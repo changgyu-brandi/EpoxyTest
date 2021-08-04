@@ -49,13 +49,6 @@ class MainActivity : AppCompatActivity() {
         val license = getStringToClass(str, LicenseData::class.java)
         binding.rvList.addItemDecoration(DividerItemDecoration(this, LinearLayoutManager.VERTICAL))
         controller.setData(license.data)
-
-        val list = listOf(1,2,3,4,5)
-        val lis = list.map {
-            LicenseInfo(it,"","","","")
-        }
-        Log.d("TAG","TAG : ${lis}")
-
     }
 
 
