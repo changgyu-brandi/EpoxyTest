@@ -21,7 +21,7 @@ class MainEpoxyController(private val listener: LicenseClickListener<LicenseInfo
                 licenseInfo(it)
                 licenseClickListener(listener)
                 spanSizeOverride { totalSpanCount, position, itemCount ->
-                    if(it.id%3==0) 2
+                    if(position%3==0) 2
                     else 1
                 } // not working
             }
