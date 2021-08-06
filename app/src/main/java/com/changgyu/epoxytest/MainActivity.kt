@@ -47,12 +47,12 @@ class MainActivity : AppCompatActivity() {
         binding.rvList.adapter = controller.adapter
         val gl = GridLayoutManager(this,2 )
         binding.rvList.layoutManager = gl
-        gl.spanSizeLookup = object: GridLayoutManager.SpanSizeLookup(){
+/*        gl.spanSizeLookup = object: GridLayoutManager.SpanSizeLookup(){
             override fun getSpanSize(position: Int): Int {
                 if(position%3==0) return 2
                 else return 1
             }
-        }
+        }*/
         val str = Gson().toJson(getLicenseData())       //현재 LicenseData를 하드코딩으로 해놨는데 서버에서 받아오는 방식으로 변경
         val license = getStringToClass(str, LicenseData::class.java)
         binding.rvList.addItemDecoration(DividerItemDecoration(this, LinearLayoutManager.VERTICAL))
